@@ -195,7 +195,7 @@
                 ],
                 subjects: [],
                 cart: [],
-                baseUrl: 'http://localhost:3000/',
+                baseUrl: 'https://dawoodapplicationcw2-env.eba-eqnfd3qp.eu-west-2.elasticbeanstalk.com/',
             },
             created() {
                 this.fetchLessons();
@@ -203,7 +203,7 @@
 
             methods: {
                 fetchLessons() {
-                    fetch('http://localhost:3000/lessons')
+                    fetch('https://dawoodapplicationcw2-env.eba-eqnfd3qp.eu-west-2.elasticbeanstalk.com/lessons')
                         .then(response => response.json())
                         .then(data => {
                             this.subjects = data.map(lesson => ({
@@ -237,7 +237,7 @@
                         })),
                     };
 
-                    fetch('http://localhost:3000/orders', {
+                    fetch('https://dawoodapplicationcw2-env.eba-eqnfd3qp.eu-west-2.elasticbeanstalk.com/orders', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
